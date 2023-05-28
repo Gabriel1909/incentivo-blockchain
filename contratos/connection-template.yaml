@@ -1,0 +1,58 @@
+---
+name: ehrnetwork-hospital1
+version: 1.0.0
+client:
+  organization: Hospital1
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  Hospital1:
+    mspid: Hospital1MSP
+    peers:
+      - P874LG
+      - P09Q6Y
+      - P60CC5
+      - P30KEH
+      - P51VDL
+    certificateAuthorities:
+      - ca.hospital1.example.com
+peers:
+  P874LG:
+    url: grpcs://localhost:7051
+    tlsCACerts:
+      pem: |
+        ${PEER_PEM}
+
+  P09Q6Y:
+    url: grpcs://localhost:8051
+    tlsCACerts:
+      pem: |
+        ${PEER_PEM}
+
+  P60CC5:
+    url: grpcs://localhost:9051
+    tlsCACerts:
+      pem: |
+        ${PEER_PEM}
+
+  P30KEH:
+    url: grpcs://localhost:10051
+    tlsCACerts:
+      pem: |
+        ${PEER_PEM}
+
+  P51VDL:
+    url: grpcs://localhost:11051
+    tlsCACerts:
+      pem: |
+        ${PEER_PEM}
+
+certificateAuthorities:
+  ca.hospital1.example.com:
+    url: https://localhost:7054
+    caName: ca-hospital1
+    tlsCACerts:
+      pem: |
+        ${CA_PEM}

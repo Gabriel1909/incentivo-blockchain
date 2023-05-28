@@ -1,0 +1,40 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+PeerOrgs:
+  - Name: Hospital1
+    Domain: hospital1.example.com
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: orderer0
+        CommonName: orderer0.hospital1.example.com
+        SANS:
+          - "localhost"
+          - "172.20.0.100"
+      - Hostname: P874LG
+        CommonName: P874LG
+        SANS:
+          - "localhost"
+          - "172.20.0.10"
+      - Hostname: P09Q6Y
+        CommonName: P09Q6Y
+        SANS:
+          - "localhost"
+          - "172.20.0.20"
+      - Hostname: P60CC5
+        CommonName: P60CC5
+        SANS:
+          - "localhost"
+          - "172.20.0.30"
+      - Hostname: P30KEH
+        CommonName: P30KEH
+        SANS:
+          - "localhost"
+          - "172.20.0.40"
+      - Hostname: P51VDL
+        CommonName: P51VDL
+        SANS:
+          - "localhost"
+          - "172.20.0.50"
